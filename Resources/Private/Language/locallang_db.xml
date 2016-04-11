@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<T3locallang>
+	<meta type="array">
+		<type>database</type>
+		<description>Language labels for database tables/fields belonging to extension 'pits_layerslider'</description>
+	</meta>
+	<data type="array">
+		<languageKey index="default" type="array">
+            
+			<label index="tx_pitslayerslider_domain_model_layerslider">Layerslider - Main Sliders</label>
+			<label index="tx_pitslayerslider_domain_model_layerslider.title">Title</label>
+			<label index="tx_pitslayerslider_domain_model_sublayers">Layerslider - Inner layers</label>
+			<label index="tx_pitslayerslider_domain_model_layerslider.background">Slider Background Image</label>
+			<label index="tx_pitslayerslider_domain_model_layerslider.thumbnail">Slider Thumbnail Image</label>
+			<label index="tx_pitslayerslider_domain_model_layerslider.slidedelay">Slider Slide Delay(ms)</label>
+			<label index="tx_pitslayerslider_domain_model_layerslider.slidedirection">Slider Slide Direction</label>
+			<label index="tx_pitslayerslider_domain_model_layerslider.durationin">Slider Duration In(ms)</label>
+			<label index="tx_pitslayerslider_domain_model_layerslider.easingin">Slider Easingin</label>
+			
+			<label index="tx_pitslayerslider_domain_model_layerslider.delayin">Slider Delayin(ms)</label>
+			<label index="tx_pitslayerslider_domain_model_layerslider.durationout">Slider Durationout(ms)</label>
+			<label index="tx_pitslayerslider_domain_model_layerslider.easingout">Slider Easingout</label>
+			<label index="tx_pitslayerslider_domain_model_layerslider.delayout">Slider Delayout(ms)</label>
+			<label index="tx_pitslayerslider_domain_model_layerslider.layer_link">Slider Layer Link</label>
+			<label index="tx_pitslayerslider_domain_model_layerslider.layer_link_target">Slider Layer Target</label>
+			
+			<label index="tx_pitslayerslider_domain_model_layerslider.layer_title">Layer Title</label>
+			<label index="tx_pitslayerslider_domain_model_layerslider.layer_text">Layer Text</label>
+			<label index="tx_pitslayerslider_domain_model_layerslider.layer_style">Layer Style</label>
+			<label index="tx_pitslayerslider_domain_model_layerslider.layer_url">Layer URL</label>
+			<label index="tx_pitslayerslider_domain_model_layerslider.layer_link_control">Layer Control</label>
+			<label index="tx_pitslayerslider_domain_model_layerslider.layer_image">Layer Image</label>
+			<label index="tx_pitslayerslider_domain_model_layerslider.layer_title">Layer Title</label>
+			<label index="tx_pitslayerslider_domain_model_layerslider.layer_image_alt">Layer Image Alt Text</label>
+			
+			<label index="tx_pitslayerslider_domain_model_layerslider.layer_custom">Layer Custom</label>
+			<label index="tx_pitslayerslider_domain_model_layerslider.layer_top">Layer Top</label>
+			<label index="tx_pitslayerslider_domain_model_layerslider.layer_left">Layer Left</label>
+			<label index="tx_pitslayerslider_domain_model_layerslider.layer_custom_style">Layer Custom Style</label>
+			<label index="tx_pitslayerslider_domain_model_layerslider.layer_slidein_dir">Layer Slide In Dir</label>
+			<label index="tx_pitslayerslider_domain_model_layerslider.layer_easingin">Layer Easing In </label>
+			<label index="tx_pitslayerslider_domain_model_layerslider.layer_easingout">Layer Easing Out </label>
+			<label index="tx_pitslayerslider_domain_model_layerslider.layer_slideout_dir">Layer Slide Out Dir</label>
+			<label index="tx_pitslayerslider_domain_model_layerslider.layer_slider_other_options">Layer Slide Other optionss</label>
+			<label index="tx_pitslayerslider_domain_model_layerslider.layer_slidein_duration">Layer Slide in Duration</label>
+			<label index="tx_pitslayerslider_domain_model_layerslider.layer_delay_in">Layer Delay in Duration</label>
+			<label index="tx_pitslayerslider_domain_model_layerslider.layer_delay_out">Layer Delay out Duration</label>
+			<label index="tx_pitslayerslider_domain_model_layerslider.layer_slideout_duration">Layer Slide out Duration</label>
+			<label index="tx_pitslayerslider_domain_model_layerslider.layer_units">Layer Show Until</label>
+			<label index="tx_pitslayerslider_domain_model_layerslider.parenttab_id">Layer Parent Slide</label>
+			
+			
+			
+			
+			
+		</languageKey>
+	</data>
+</T3locallang>

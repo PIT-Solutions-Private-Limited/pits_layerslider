@@ -1,0 +1,40 @@
+<f:layout name="Backend" />
+<f:section name="content">
+<div class="ls-layer" style="width: 900px; height: 500px;" id="ls-preview-content">
+<img src="{tabInfo.sliderInfo.0.background}" id="layer_{tabInfo.sliderInfo.0.uid}" alt="Slide background" class="ls-bg" style="" />
+<f:for each="{tabInfo.tabsInfo}" as="layers" key="layerKey" iteration="layerObj">
+	<f:if condition="{layers.is_htmltag}">
+		<f:then>
+			<{layers.layer_style} class="ls-s draggable {layers.layer_custom}" id="layer_{layers.uid}" style="
+				top: {layers.layer_top}px; 
+				left: {layers.layer_left}px;slidedirection : {layers.layer_slidein_dir}; 
+				slideoutdirection : {layers.layer_slideout_dir}; 
+				easingin : {layers.layer_easingin}; 
+			easingout : {layers.layer_easingout};
+			durationin : {layers.layer_slidein_duration};
+			durationout : {layers.layer_slideout_duration};
+			delayin :{layers.layer_delay_in};
+			scalein : 0;showuntil:{layers.layer_units};
+			rotatein: 180; 
+			rotateout: -90;
+                        white-space:nowrap;" ><f:format.htmlentitiesDecode>{layers.layer_text}</f:format.htmlentitiesDecode></{layers.layer_style}>
+		</f:then>
+		<f:else>
+		<f:if condition="{layers.layer_image}">
+		<img src="{layers.layer_image}" id="layer_{layers.uid}" class="draggable ls-s" alt="Slide background" id="layer_{layers.uid}" style="top: {layers.layer_top}px; 
+					left: {layers.layer_left}px;slidedirection : {layers.layer_slidein_dir}; 
+			slideoutdirection : {layers.layer_slideout_dir}; 
+			easingin : {layers.layer_easingin}; 
+			easingout : {layers.layer_easingout};
+			durationin : {layers.layer_slidein_duration};
+			durationout : {layers.layer_slideout_duration};
+			delayin :{layers.layer_delay_in};
+			scalein : 0;showuntil:{layers.layer_units};
+			rotatein: 180; 
+			rotateout: -90;" >
+		</f:if>
+		</f:else>
+	</f:if>
+</f:for>
+</div>
+</f:section>

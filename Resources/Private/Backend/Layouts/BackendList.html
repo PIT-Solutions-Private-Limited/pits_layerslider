@@ -1,0 +1,78 @@
+<f:be.container>
+    <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
+
+
+    <div class="typo3-fullDoc">
+        <div class="col-md-12" style="background-color: #666666;height: 32px;">
+            <div  style="width: 3%; display: block; float: left;margin-top: 3px;">
+                <div class="buttonsright">
+                    <f:be.buttons.shortcut />
+                </div>
+            </div>
+            <div style="width: 10%; display: block; float: left;margin-top: 3px;">
+                <div class="docheader-row2-left">
+                    <f:be.buttons.csh />
+                    <f:be.menus.actionMenu>
+                        <f:be.menus.actionMenuItem label="Overview" controller="" action="list" />
+                    </f:be.menus.actionMenu>
+                </div>
+            </div>
+            <div style="width: 40%; display: block; float: left;margin-top: 3px;">
+                <div class="docheader-row2-right">
+                    <f:be.pagePath />
+                    <f:be.pageInfo />
+                </div>
+            </div>
+            <div style="width: 10%; display: block; float: left;margin-top: 3px;">
+                <div class="button-and-hidden">
+                    <input type="hidden" id="uri-savetabdata" value="{f:uri.action(action: 'savetabdata', controller: 'Pitslayerslider')}">
+                    <button name="save_formdata" id="layer-slider">Save</button>
+                    <input type="hidden" id="uri-getdata" value="{f:uri.action(action: 'getdata', controller: 'Pitslayerslider')}">
+                    <input type="hidden" value="{globalSetting.baseUrl}" id="baseUrl"/>
+                </div>
+            </div>
+        </div>
+
+
+        <div id="typo3-docheader" style="width:100px;">
+<!--            <div id="typo3-docheader-row1" style="width:100%; float:left">
+                <div class="buttonsleft"></div>
+
+
+
+
+
+
+            </div>-->
+
+            <!--            <div id="typo3-docheader-row2" style="width:90%;float:right">
+                            <div class="docheader-row2-left">
+                                <f:be.buttons.csh />
+                                <f:be.menus.actionMenu>
+                                    <f:be.menus.actionMenuItem label="Overview" controller="" action="list" />
+                                </f:be.menus.actionMenu>
+                            </div>
+            
+                            <div class="docheader-row2-right">
+                                <f:be.pagePath />
+                                <f:be.pageInfo />
+                            </div>
+            
+                            <input type="hidden" id="uri-savetabdata" value="{f:uri.action(action: 'savetabdata', controller: 'Pitslayerslider')}">
+                            <button name="save_formdata" id="layer-slider">Save</button>
+                            <input type="hidden" id="uri-getdata" value="{f:uri.action(action: 'getdata', controller: 'Pitslayerslider')}">
+                            <input type="hidden" value="{globalSetting.baseUrl}" id="baseUrl"/>
+                        </div>-->
+
+        </div>
+        <div id="typo3-docbody">
+            <div id="typo3-inner-docbody">
+                <f:flashMessages renderMode="div" />
+
+                <f:render section="content" />
+            </div>
+        </div>
+    </div>
+</f:be.container>

@@ -1,0 +1,205 @@
+<f:layout name="Backend" />
+<f:section name="content">
+    <div class="tabs_inner" id="inner-layer-{tabInfo.uid}">
+    	<input type="hidden" value="" id="layer_order_{tabInfo.uid}" name="tx_pitslayerslider_web_pitslayersliderpitslayerslider[layer_data][{tabInfo.uid}][layer_order]"/>
+        <ul>
+            <label>Layer #{tabInfo.uid}</label>
+            <li class="slide-tab"><a href="#tabs-effects-{tabInfo.uid}">Effects</a></li>
+            <li class="slide-tab"><a href="#tabs-basic-{tabInfo.uid}">Basic</a></li>
+        </ul>
+        <div id="tabs-effects-{tabInfo.uid}">
+            <table style="width: 100%;">
+                <tr>&nbsp;</tr>
+                <tr>&nbsp;</tr>
+                <tr>
+                    <td width=100>
+                        <table>
+                            <tr><td><img width="100px" height="100px"  src="http://www.newark.com/wcsstore7.00.10.462/SafeB2BStorefrontAssetStore/images/NoImageIcon.jpg?01AD=3vUilCIda_00WkCR1uxUdQmKQEBnBx7jd2fQIUmXnI-fVbIoxLRjmHA&01RI=F508EBEF7CF7311&01NA=" id="child_layer_img_{tabInfo.uid}_effect"/></td></tr>
+                        </table>
+                    </td>
+                    <td>&nbsp;</td>
+                    <td width="200">
+                        <table>
+                            <tr><td>&nbsp;</td></tr>
+                            <tr><td>Slide In:</td>
+                                <td><label>Direction</label>
+                                    <select data-help="The type of the transition." class="sublayerprop" name="tx_pitslayerslider_web_pitslayersliderpitslayerslider[layer_data][{tabInfo.uid}][layer_slidein_dir]">
+                                        <f:for each="{tabInfo.transitionList}" as="value" key="key">
+                                            <f:if condition="{tabInfo.layer_slidein_dir}=={key}">
+                                                <f:then>
+                                                    <option selected="selected" value="{key}">{value}</option>
+                                                </f:then>
+                                                <f:else>
+                                                    <option value="{key}">{value}</option>
+                                                </f:else>
+                                            </f:if>
+                                        </f:for>
+                                    </select>
+
+                                </td></tr>
+                            <tr>
+                                <td>Slide Out:</td>
+                                <td>
+                                    <label>Direction</label>
+                                    <select data-help="The type of the transition." class="sublayerprop" name="tx_pitslayerslider_web_pitslayersliderpitslayerslider[layer_data][{tabInfo.uid}][layer_slideout_dir]">
+                                        <f:for each="{tabInfo.transitionList}" as="value" key="key">
+                                            <f:if condition="{tabInfo.layer_slideout_dir}=={key}">
+                                                <f:then>
+                                                    <option selected="selected" value="{key}">{value}</option>
+                                                </f:then>
+                                                <f:else>
+                                                    <option value="{key}">{value}</option>
+                                                </f:else>
+                                            </f:if>
+                                        </f:for>
+                                    </select>
+                                </td></tr>
+                            <tr><td>Other Options:</td><td><label>P.level</label><input type="text" style="width: 100px" name="tx_pitslayerslider_web_pitslayersliderpitslayerslider[layer_data][{tabInfo.uid}][layer_slider_other_options]" value=""></td></tr>
+                        </table>
+                    </td>
+                    <td>
+                        <table>
+                            <tr><td>&nbsp;</td></tr>
+                            <tr><td><label>Duration</label><input type="text" style="width: 100px" name="tx_pitslayerslider_web_pitslayersliderpitslayerslider[layer_data][{tabInfo.uid}][layer_slidein_duration]" value="" >ms</td></tr>
+                            <tr><td><label>Duration</label><input type="text" style="width: 100px" name="tx_pitslayerslider_web_pitslayersliderpitslayerslider[layer_data][{tabInfo.uid}][layer_slideout_duration]" value="" >ms</td></tr>
+                            <tr><td>&nbsp;</td></tr>
+                        </table>
+                    </td>
+                    <td>
+                        <table>
+                            <tr><td>&nbsp;</td></tr>
+                            <tr><td><label>Easing</label>
+
+                                    <select class="layerprop" name="tx_pitslayerslider_web_pitslayersliderpitslayerslider[layer_data][{tabInfo.uid}][layer_easingin]">
+                                        <f:for each="{tabInfo.easingList}" as="value" key="key">
+                                            <f:if condition="{tabInfo.layer_easingin}=={value}">
+                                                <f:then>
+                                                    <option selected>{value}</option>
+                                                </f:then>
+                                                <f:else>
+                                                    <option>{value}</option>
+                                                </f:else>
+                                            </f:if>
+                                        </f:for>
+                                    </select></td></tr>
+                            <tr><td><label>Easing</label>
+                                    <select class="layerprop" name="tx_pitslayerslider_web_pitslayersliderpitslayerslider[layer_data][{tabInfo.uid}][layer_easingout]">
+                                        <f:for each="{tabInfo.easingList}" as="value" key="key">
+                                            <f:if condition="{tabInfo.layer_easingout}=={value}">
+                                                <f:then>
+                                                    <option selected>{value}</option>
+                                                </f:then>
+                                                <f:else>
+                                                    <option>{value}</option>
+                                                </f:else>
+                                            </f:if>
+                                        </f:for>
+                                    </select>
+                                </td></tr>
+                            <tr><td><label>Show unit</label><input type="text" style="width: 100px" name="tx_pitslayerslider_web_pitslayersliderpitslayerslider[layer_data][{tabInfo.uid}][layer_units]" value="">(ms)</td></tr>
+                        </table>
+                    </td>
+                    <td>
+                        <table>
+                            <tr><td>&nbsp;</td></tr>
+                            <tr><td><label>Delay</label><input type="text" style="width: 100px" name="tx_pitslayerslider_web_pitslayersliderpitslayerslider[layer_data][{tabInfo.uid}][layer_delay_in]" value="">(ms)</td></tr>
+                            <tr><td><label>Delay</label><input type="text" style="width: 100px" name="tx_pitslayerslider_web_pitslayersliderpitslayerslider[layer_data][{tabInfo.uid}][layer_delay_out]" value="">(ms)</td></tr>
+                            <tr><td>&nbsp;</td></tr>
+                        </table>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <div id="tabs-basic-{tabInfo.uid}">
+            <table style="width: 100%;">
+                <tr>&nbsp;</tr>
+                <tr>&nbsp;</tr>
+                <tr>
+                    <td width=100>
+                        <table>
+                            <tr><td><img width="100px" height="100px"  src="http://www.newark.com/wcsstore7.00.10.462/SafeB2BStorefrontAssetStore/images/NoImageIcon.jpg?01AD=3vUilCIda_00WkCR1uxUdQmKQEBnBx7jd2fQIUmXnI-fVbIoxLRjmHA&01RI=F508EBEF7CF7311&01NA=" id="child_layer_img_{tabInfo.uid}"/></td></tr>
+                            <tr><td>
+                                    <input type="hidden" value="" name="tx_pitslayerslider_web_pitslayersliderpitslayerslider[layer_data][{tabInfo.uid}][layer_image]" id="child_layer_img_{tabInfo.uid}_text"/>
+                                    <input type="button" style="width: 100px" value="upload" class="topopup" onclick="load_elfinder('{tabInfo.uid}','1');"/>
+                                </td></tr>
+                        </table>
+                    </td>
+                    <td>&nbsp;</td>
+                    <td>
+                        <table>
+                            <tr><td>&nbsp;</td></tr>
+                            <tr><td></td></tr>
+                            <tr><td>&nbsp;</td></tr>
+                            <tr><td>&nbsp;</td></tr>
+                            <tr><td></td></tr>
+                            <tr><td>&nbsp;</td></tr>
+                            <tr><td><input type="text" style="width: 100px"  id="layertext_{tabInfo.uid}" placeholder="Text here"  class="attributes tooltip"   value="" name="tx_pitslayerslider_web_pitslayersliderpitslayerslider[layer_data][{tabInfo.uid}][layer_text]" value="{tabInfoChild.layer_text}"></td></tr>
+                            <tr>
+                                <td>
+                                    <label>Style</label>
+                                    <select name="tx_pitslayerslider_web_pitslayersliderpitslayerslider[layer_data][{tabInfo.uid}][layer_style]" class="attributes"  id="htmltag_{tabInfo.uid}" >
+                                        <f:for each="{tabInfo.styleList}" as="value" key="key">
+                                            <f:if condition="{tabInfo.layer_style}=={key}">
+                                                <f:then>
+                                                    <option selected="selected" value="{key}">{value}</option>
+                                                </f:then>
+                                                <f:else>
+                                                    <option value="{key}">{value}</option>
+                                                </f:else>
+                                            </f:if>
+                                        </f:for>
+                                    </select>
+                                </td>
+                                <td>&nbsp;</td>
+                            </tr>
+                        </table>
+                    </td>
+                    <td>
+                        <table>
+                            <tr><td>&nbsp;</td></tr>
+                            <tr><td>&nbsp;</td></tr>
+                            <tr><td>&nbsp;</td></tr>
+                            <tr><td>Sublayer URL</td></tr>
+                            <tr>
+                                <td><input type="text" style="width: 100px"  placeholder="URL for the layer"  name="tx_pitslayerslider_web_pitslayersliderpitslayerslider[layer_data][{tabInfo.uid}][layer_url]" value="">
+                                    <select name="tx_pitslayerslider_web_pitslayersliderpitslayerslider[layer_data][{tabInfo.uid}][layer_link_control]">
+                                        <f:for each="{tabInfo.urlControlList}" as="value" key="key">
+                                            <f:if condition="{tabInfo.layer_link_control}=={value}">
+                                                <f:then>
+                                                    <option selected>{value}</option>
+                                                </f:then>
+                                                <f:else>
+                                                    <option>{value}</option>
+                                                </f:else>
+                                            </f:if>
+                                        </f:for>
+                                    </select></td>
+                                <td>&nbsp;</td>
+                            </tr>
+                        </table>
+                    </td>
+                    <td>
+                        <table>
+                            <tr><td>&nbsp;</td></tr>
+                            <tr><td>Attributes</td></tr>
+                            <tr><td><input type="text" style="width: 100px" placeholder="Title for the layer." name="tx_pitslayerslider_web_pitslayersliderpitslayerslider[layer_data][{tabInfo.uid}][layer_title]" value="{tabInfoChild.layer_title}" ></td></tr>
+                            <tr><td><input type="text" style="width: 100px" placeholder="Alt text for image."  name="tx_pitslayerslider_web_pitslayersliderpitslayerslider[layer_data][{tabInfo.uid}][layer_image_alt]" value="{tabInfoChild.layer_image_alt}" ></td></tr>
+                            <tr><td><input type="text" style="width: 100px" placeholder="Custom field."  id="layer_custom_{tabInfo.uid}"  class="attributes tooltip" name="tx_pitslayerslider_web_pitslayersliderpitslayerslider[layer_data][{tabInfo.uid}][layer_custom]"  value="{tabInfoChild.layer_custom}"></td></tr>
+                        </table>
+                    </td>
+                    <td>
+                        <table>
+                            <tr><td>&nbsp;</td></tr>
+                            <tr><td>Top</td><td><input onkeyup="setPreview('{tabsInfoChild.uid}')" type="text" style="width: 100px" class="attributes" id="layer_top_{tabInfo.uid}"  name="tx_pitslayerslider_web_pitslayersliderpitslayerslider[layer_data][{tabInfo.uid}][layer_top]" value="{tabInfoChild.layer_top}"></td></tr>
+                            <tr><td>Left</td><td><input onkeyup="setPreview('{tabsInfoChild.uid}')" type="text" style="width: 100px" class="attributes" id="layer_left_{tabInfo.uid}" name="tx_pitslayerslider_web_pitslayersliderpitslayerslider[layer_data][{tabInfo.uid}][layer_left]" value="{tabInfoChild.layer_left}"></td></tr>
+                            <tr><td>Custom Styles</td><td><textarea rows="5" cols="15" class="attributes tooltip" id="layercustomstyle_{tabInfo.uid}" name="tx_pitslayerslider_web_pitslayersliderpitslayerslider[layer_data][{tabInfo.uid}][layer_custom_style]">{tabInfoChild.layer_custom_style}</textarea></td></tr>
+                        </table>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <input id="new-addlayer-url" class="new-addlayer-url" type="hidden" value="{f:uri.action(action: 'addlayer', controller: 'Pitslayerslider')}">
+        <input id ='add_sublayer_{tabInfo.tab_id}' class="sub_layer" type="button" value="Add new sublayer" />
+    </div>
+    
+</f:section>

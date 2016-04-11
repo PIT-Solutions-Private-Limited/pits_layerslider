@@ -1,0 +1,27 @@
+<f:layout name="Default" />
+<f:be.container pageTitle="''" enableClickMenu="1" loadExtJs="1" loadExtJsTheme="1" enableExtJsDebug="1" loadJQuery="1" includeCssFiles="{foo: 'bar'}" includeJsFiles="{foo: 'bar'}" addJsInlineLabels="{foo: 'bar'}" includeRequireJsModules="{foo: 'bar'}" jQueryNamespace="NULL">
+
+This template displays a NEW form for the current domain object.
+
+If you modify this template, do not forget to change the overwrite settings
+in /Configuration/ExtensionBuilder/settings.yaml:
+  Resources:
+    Private:
+      Templates:
+        New.html: keep
+
+Otherwise your changes will be overwritten the next time you save the extension in the extension builder
+
+<f:section name="main">
+<h1>New Layerslider</h1>
+
+<f:flashMessages />
+
+<f:render partial="FormErrors" />
+
+<f:form action="create"  name="newLayerslider" object="{newLayerslider}">
+<f:render partial="Layerslider/FormFields" />
+	<f:form.submit value="Create new" />
+</f:form>
+</f:section>
+</f:be.container>

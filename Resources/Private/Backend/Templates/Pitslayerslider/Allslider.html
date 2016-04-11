@@ -1,0 +1,43 @@
+<f:layout name="DefaultA" />
+<f:section name="content">
+	<f:for each="{tabInfo}" as="slider" key="sliderKey" iteration="sliderObj">
+		<div class="ls-layer" style="{slider.style} " >
+			<img src="{slider.background}" id="layer_{slider.uid}" alt="" class="ls-bg" />
+			<f:if condition="{tabInfo.sliderInfo.0.thumbnail}"> <img class="ls-tn" src="{tabInfo.sliderInfo.0.thumbnail}" alt=""> </f:if>
+			<f:for each="{slider.child}" as="layers" key="layerKey" iteration="layerObj">
+				<f:if condition="{layers.is_htmltag}">
+					<f:then>
+							<{layers.layer_style} class="ls-s{layerObj.cycle} draggable {layers.layer_custom}" id="layer_{layers.uid}" style="
+								{layers.layer_custom_style}
+								top: {layers.layer_top}px; 
+								left: {layers.layer_left}px;slidedirection : {layers.layer_slidein_dir}; 
+								slideoutdirection : {layers.layer_slideout_dir}; 
+								easingin : {layers.layer_easingin}; 
+								easingout : {layers.layer_easingout};
+								durationin : {layers.layer_slidein_duration};
+								durationout : {layers.layer_slideout_duration};
+								delayin :{layers.layer_delay_in};
+								showuntil:{layers.layer_units};" ><f:format.htmlentitiesDecode>{layers.layer_text}</f:format.htmlentitiesDecode></{layers.layer_style}>
+							</f:then>
+					<f:else>
+						<f:if condition="{layers.layer_image}">
+							<img src="{layers.layer_image}" id="layer_{layers.uid}"
+								class="draggable ls-s{layerObj.cycle}" alt=""
+								id="layer_{layers.uid}" style="
+								{layers.layer_custom_style}
+								top: {layers.layer_top}px; 
+								left: {layers.layer_left}px;slidedirection : {layers.layer_slidein_dir}; 
+								slideoutdirection : {layers.layer_slideout_dir}; 
+								easingin : {layers.layer_easingin}; 
+								easingout : {layers.layer_easingout};
+								durationin : {layers.layer_slidein_duration};
+								durationout : {layers.layer_slideout_duration};
+								delayin :{layers.layer_delay_in};
+								showuntil:{layers.layer_units};">
+						</f:if>
+					</f:else>
+				</f:if>
+			</f:for>
+		</div>
+	</f:for>
+</f:section>

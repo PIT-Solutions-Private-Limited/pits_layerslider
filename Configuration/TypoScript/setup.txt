@@ -1,0 +1,57 @@
+plugin.tx_pitslayerslider {
+	view {
+		templateRootPath = {$plugin.tx_pitslayerslider.view.templateRootPath}
+		partialRootPath = {$plugin.tx_pitslayerslider.view.partialRootPath}
+		layoutRootPath = {$plugin.tx_pitslayerslider.view.layoutRootPath}
+	}
+	persistence {
+		storagePid = {$plugin.tx_pitslayerslider.persistence.storagePid}
+	}
+	features {
+		# uncomment the following line to enable the new Property Mapper.
+		# rewrittenPropertyMapper = 1
+	}
+	settings {
+		enablejquery = {$plugin.tx_pitslayerslider.settings.enablejquery}
+		enablejqueryui = {$plugin.tx_pitslayerslider.settings.enablejqueryui}
+		enablejqueryeasing = {$plugin.tx_pitslayerslider.settings.enablejqueryeasing}
+		
+	}
+}
+
+plugin.tx_pitslayerslider._CSS_DEFAULT_STYLE (
+	textarea.f3-form-error {
+		background-color:#FF9F9F;
+		border: 1px #FF0000 solid;
+	}
+
+	input.f3-form-error {
+		background-color:#FF9F9F;
+		border: 1px #FF0000 solid;
+	}
+
+	.tx-pits-layerslider table {
+		border-collapse:separate;
+		border-spacing:10px;
+	}
+
+	.tx-pits-layerslider table th {
+		font-weight:bold;
+	}
+
+	.tx-pits-layerslider table td {
+		vertical-align:top;
+	}
+)
+
+ # Module configuration
+module.tx_pitslayerslider {
+	persistence {
+		storagePid = {$module.tx_pitslayerslider.persistence.storagePid}
+	}
+	view {
+		templateRootPath = {$module.tx_pitslayerslider.view.templateRootPath}
+		partialRootPath = {$module.tx_pitslayerslider.view.partialRootPath}
+		layoutRootPath = {$module.tx_pitslayerslider.view.layoutRootPath}
+	}
+}
