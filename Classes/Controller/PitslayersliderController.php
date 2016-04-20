@@ -172,11 +172,6 @@ class PitslayersliderController extends \TYPO3\CMS\Extbase\Mvc\Controller\Action
      */
     public function addtabAction() {
         $request = $this->request->getArguments();
-//        print_r($request['tab_id']);
-//        print_r($request['title']);
-//        die;
-//        $insert['tab_id'] = $request['tab_id'];
-//        $insert['title'] = $request['title'];
         $insert['title'] = $request['tab_title'];
         if (!empty($_REQUEST['id'])) {
             $insert['pid'] = $_REQUEST['id'];
@@ -190,12 +185,12 @@ class PitslayersliderController extends \TYPO3\CMS\Extbase\Mvc\Controller\Action
         $sublayer['tstamp'] = time();
         $sublayer['crdate'] = time();
         $GLOBALS['TYPO3_DB']->exec_INSERTquery('tx_pitslayerslider_domain_model_sublayers', $sublayer);
-        //update the layer name
         $fields_values['layer_title'] = 'Layer #' . $GLOBALS['TYPO3_DB']->sql_insert_id();
         $table = "tx_pitslayerslider_domain_model_sublayers";
         $where = "uid = " . $GLOBALS['TYPO3_DB']->sql_insert_id();
         $GLOBALS['TYPO3_DB']->exec_UPDATEquery($table, $where, $fields_values, $no_quote_fields = '');
-        exit;
+
+        $this->redirect('list', 'Pitslayerslider', null, null);
     }
 
     /**
@@ -215,7 +210,6 @@ class PitslayersliderController extends \TYPO3\CMS\Extbase\Mvc\Controller\Action
         $sublayer['layer_order'] = 999;
         $GLOBALS['TYPO3_DB']->exec_INSERTquery('tx_pitslayerslider_domain_model_sublayers', $sublayer);
         $tabInfo["uid"] = $GLOBALS['TYPO3_DB']->sql_insert_id();
-        //update the layer name
         $fields_values['layer_title'] = 'Layer #' . $GLOBALS['TYPO3_DB']->sql_insert_id();
         $table = "tx_pitslayerslider_domain_model_sublayers";
         $where = "uid = " . $GLOBALS['TYPO3_DB']->sql_insert_id();
@@ -364,7 +358,7 @@ class PitslayersliderController extends \TYPO3\CMS\Extbase\Mvc\Controller\Action
     public function allsliderAction() {
         $request = $this->request->getArguments();
         $tab_id = $request['tab_id'];
-        
+
         $select_fields = '*';
         $from_table = 'tx_pitslayerslider_domain_model_layerslider';
         $where_clause = 'deleted = 0 AND hidden = 0 ';
@@ -431,7 +425,7 @@ class PitslayersliderController extends \TYPO3\CMS\Extbase\Mvc\Controller\Action
             }
         }
 //        echo "test";
-        
+
         $this->view->assign("globalSetting", $globalSettingArr);
         $this->view->assign("tabInfo", $finalArr);
     }

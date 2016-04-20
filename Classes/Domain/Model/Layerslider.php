@@ -6,7 +6,7 @@ namespace PITS\PitsLayerslider\Domain\Model;
  *
  *  (c) 2013 Sivaprasad S <sivaprasad.s@pitsolutions.com>, Pit Solution Pvt Ltd
  *  Abin Sabu <abin.sabu@pitsolutions.com>, PIT Solution Pvt Ltd
- *  
+ *
  *  All rights reserved
  *
  *  This script is part of the TYPO3 project. The TYPO3 project is
@@ -37,7 +37,7 @@ class Layerslider extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity {
 
 	/**
 	 * title
-         * 
+   * 
 	 * @var string
 	 */
 	protected $title = null;

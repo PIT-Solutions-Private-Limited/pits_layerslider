@@ -74,12 +74,13 @@ function closeLayerLabel(label_id) {
 }
 /* tab label edit*/
 function removeTab(tabId, type, url) {
+    var urlDel = jQuery("#delete-tab-uri").val();
     var didConfirm = confirm("Delete " + type + "?");
     if (didConfirm === true) {
         var baseUrl = location.href.substr(0, location.href.lastIndexOf("/") + 1);
 //        var url = baseUrl + 'mod.php?M=web_PitsLayersliderPitslayerslider&id=3&tx_pitslayerslider_web_pitslayersliderpitslayerslider[action]=deleteTab';
         jQuery.ajax({
-            url: url,
+            url: urlDel,
             type: "POST",
             data: {
                 tx_pitslayerslider_web_pitslayersliderpitslayerslider: ({
@@ -107,7 +108,7 @@ function load_elfinder(id, type) {
     imageId = '#child_layer_img_' + id;
     textBoxId = '#background_' + id;
     thumbBoxId = '#thumb_' + id;
-    sliderId = 'layer_' + id;
+    sliderId = '#layer_' + id;
     layerId = id;
     loadPopup();
     jQuery('#elfinder').elfinder({
@@ -131,8 +132,8 @@ function load_elfinder(id, type) {
     });
 }
 function getUrl(urlObj) {
-    if (elType === 1) {
-        jQuery('#' + sliderId).remove();
+    if (elType === '1') {
+        jQuery(sliderId).val(urlObj.url);
         jQuery(imageId).attr('src', urlObj.url);
         jQuery(imageId + '_effect').attr('src', urlObj.url);
         jQuery(imageId + '_text').val(urlObj.url);
@@ -145,10 +146,10 @@ function getUrl(urlObj) {
         doDraggableAction();
 
     }
-    if (elType === 3) {
+    if (elType === '3') {
         jQuery(thumbBoxId).val(urlObj.url);
     }
-    if (elType === 0) {
+    if (elType === '0') {
         jQuery(textBoxId).val(urlObj.url);
         jQuery('#ls-preview-content').show();
         jQuery('#' + sliderId).attr('src', urlObj.url);
