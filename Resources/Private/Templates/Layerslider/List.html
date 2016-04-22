@@ -15,9 +15,9 @@
         <div id="layerslider" style="width:{globalSetting.width}px; height:{globalSetting.height}px; margin: 0 auto;">
             <f:for each="{tabInfo}" as="slider" key="sliderKey" iteration="sliderObj">
                 <div class="ls-layer" style="{slider.style}">
-                    <img src="{slider.background}" id="layer_{slider.uid}" alt="Slide background" class="ls-bg" />
+                    <img src="{baseurl}{slider.background}" id="layer_{slider.uid}" alt="Slide background" class="ls-bg" />
                     <f:if condition="{slider.thumbnail}">
-                        <img class="ls-tn" src="{slider.thumbnail}" alt="">
+                        <img class="ls-tn" src="{baseurl}{slider.thumbnail}" alt="">
                     </f:if>
                     <f:for each="{slider.child}" as="layers" key="layerKey" iteration="layerObj">
                         <f:if condition="{layers.is_htmltag}">
@@ -30,7 +30,7 @@
                             </f:then>
                             <f:else>
                                 <f:if condition="{layers.layer_image}">
-                                    <img src="{layers.layer_image}" id="layer_{layers.uid}" class="draggable ls-s{layerObj.cycle}" alt="Slide background" id="layer_{layers.uid}" style="{layers.innerStyle}rotatein: 180;rotateout: -90;">
+                                    <img src="{baseurl}{layers.layer_image}" id="layer_{layers.uid}" class="draggable ls-s{layerObj.cycle}" alt="Slide background" id="layer_{layers.uid}" style="{layers.innerStyle}rotatein: 180;rotateout: -90;">
                                 </f:if>
                             </f:else>
                         </f:if>

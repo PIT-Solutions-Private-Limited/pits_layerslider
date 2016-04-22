@@ -44,6 +44,11 @@ class PitslayersliderController extends \TYPO3\CMS\Extbase\Mvc\Controller\Action
      * @return void
      */
     public function listAction() {
+       $requestScheme = $_SERVER['REQUEST_SCHEME'];
+       $host = $_SERVER['HTTP_HOST'];
+       $path = substr($_SERVER['CWD'],0,-6);
+       $baseurl = $requestScheme.'://'.$host.$path;
+
         $tags = array("span", "h1", "h2", "h3", "h4", "h5", "h6", "p");
 
         $select_fields = '*';
@@ -52,7 +57,6 @@ class PitslayersliderController extends \TYPO3\CMS\Extbase\Mvc\Controller\Action
         if (!empty($_REQUEST['id'])) {
             $where_clause .= ' AND pid = "' . $_REQUEST['id'] . '" ';
         }
-
 
         $tabsRecords['tabsInfo'] = $GLOBALS['TYPO3_DB']->exec_SELECTgetRows(
                 $select_fields, $from_table, $where_clause, $groupBy = '', $orderBy = 'tab_order', $limit = '', $uidIndexField = ''
@@ -155,13 +159,11 @@ class PitslayersliderController extends \TYPO3\CMS\Extbase\Mvc\Controller\Action
                 $i++;
             }
         }
-        $pos = strrpos($_SERVER['REQUEST_URI'], "typo3/mod.php?");
-        $project = substr($_SERVER['REQUEST_URI'], 0, $pos);
-        $urlRef = "http://" . $_SERVER['HTTP_HOST'] . $project;
-        $globalSettingArr['baseUrl'] = $urlRef;
+
         $this->view->assign("globalSetting", $globalSettingArr);
         $this->view->assign("tabInfo", $finalArr);
         $this->view->assign("tabs", $tabsRecords);
+        $this->view->assign("baseurl", $baseurl);
     }
 
     /**
@@ -356,6 +358,11 @@ class PitslayersliderController extends \TYPO3\CMS\Extbase\Mvc\Controller\Action
     }
 
     public function allsliderAction() {
+       $requestScheme = $_SERVER['REQUEST_SCHEME'];
+       $host = $_SERVER['HTTP_HOST'];
+       $path = substr($_SERVER['CWD'],0,-6);
+       $baseurl = $requestScheme.'://'.$host.$path;
+
         $request = $this->request->getArguments();
         $tab_id = $request['tab_id'];
 
@@ -428,6 +435,7 @@ class PitslayersliderController extends \TYPO3\CMS\Extbase\Mvc\Controller\Action
 
         $this->view->assign("globalSetting", $globalSettingArr);
         $this->view->assign("tabInfo", $finalArr);
+        $this->view->assign("baseurl", $baseurl);
     }
 
     /**
@@ -436,6 +444,14 @@ class PitslayersliderController extends \TYPO3\CMS\Extbase\Mvc\Controller\Action
      * @return void
      */
     public function getdataAction() {
+      $requestScheme = $_SERVER['REQUEST_SCHEME'];
+      $host = $_SERVER['HTTP_HOST'];
+      $path = substr($_SERVER['CWD'],0,-6);
+      $baseurl = $requestScheme.'://'.$host.$path;
+
+      //  \TYPO3\CMS\Extbase\Utility\DebuggerUtility::var_dump($baseurl);
+      // die;
+
         $request = $this->request->getArguments();
 
         $select_fields = '*';
@@ -460,6 +476,7 @@ class PitslayersliderController extends \TYPO3\CMS\Extbase\Mvc\Controller\Action
         }
         /* print_R($tabsRecords);exit; */
         $this->view->assign("tabInfo", $tabsRecords);
+        $this->view->assign("baseurl", $baseurl);
         echo $this->view->render();
         exit;
     }

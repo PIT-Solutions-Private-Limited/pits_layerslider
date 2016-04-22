@@ -34,6 +34,7 @@
         <div id="layerslider" style="width: 900px; height: 500px;"></div>
         <div id="layersliderw" style="width: 900px; height: 500px;  margin-bottom: 50px;"></div>
         <div class="preview_button_wrapper">
+            <input type="hidden" id="base-url" value="{baseurl}">
             <input type="hidden" id="uri-allslider" value="{f:uri.action(action: 'allslider', controller: 'Pitslayerslider')}">
             <button type="button" name="all_preview" id="all_preview" class="preview">Enter Preview</button>
             <button type="button" name="preview" id="stop" class="reset">Reset</button>
@@ -266,7 +267,7 @@
                                                         <td>
                                                             <f:if condition="{tabsInfoChild.layer_image}">
                                                                 <f:then>
-                                                                    <img width="100px" height="100px" src="{tabsInfoChild.layer_image}" id="child_layer_img_{tabsInfoChild.uid}_effect">
+                                                                    <img width="100px" height="100px" src="{baseurl}{tabsInfoChild.layer_image}" id="child_layer_img_{tabsInfoChild.uid}_effect">
                                                                 </f:then>
                                                                 <f:else>
                                                                     <img width="100px" height="100px" id="child_layer_img_{tabsInfoChild.uid}_effect" src="http://www.newark.com/wcsstore7.00.10.462/SafeB2BStorefrontAssetStore/images/NoImageIcon.jpg?01AD=3vUilCIda_00WkCR1uxUdQmKQEBnBx7jd2fQIUmXnI-fVbIoxLRjmHA&01RI=F508EBEF7CF7311&01NA=">
@@ -298,7 +299,6 @@
                                                                     </f:if>
                                                                 </f:for>
                                                             </select>
-
                                                         </td>
                                                     </tr>
                                                     <tr>
@@ -434,7 +434,7 @@
                                                                 <td>
                                                                     <f:if condition="{tabsInfoChild.layer_image}">
                                                                         <f:then>
-                                                                            <img width="100px" height="100px" src="{tabsInfoChild.layer_image}" id="child_layer_img_{tabsInfoChild.uid}">
+                                                                            <img width="100px" height="100px" src="{baseurl}{tabsInfoChild.layer_image}" id="child_layer_img_{tabsInfoChild.uid}">
                                                                         </f:then>
                                                                         <f:else>
                                                                             <img width="100px" height="100px" src="http://www.newark.com/wcsstore7.00.10.462/SafeB2BStorefrontAssetStore/images/NoImageIcon.jpg?01AD=3vUilCIda_00WkCR1uxUdQmKQEBnBx7jd2fQIUmXnI-fVbIoxLRjmHA&01RI=F508EBEF7CF7311&01NA=" id="child_layer_img_{tabsInfoChild.uid}">

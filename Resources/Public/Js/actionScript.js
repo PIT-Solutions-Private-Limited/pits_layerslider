@@ -132,11 +132,13 @@ function load_elfinder(id, type) {
     });
 }
 function getUrl(urlObj) {
+  console.log(urlObj);
+  alert(elType);
     if (elType === '1') {
-        jQuery(sliderId).val(urlObj.url);
+        jQuery(sliderId).val(urlObj.path);
         jQuery(imageId).attr('src', urlObj.url);
         jQuery(imageId + '_effect').attr('src', urlObj.url);
-        jQuery(imageId + '_text').val(urlObj.url);
+        jQuery(imageId + '_text').val(urlObj.path);
         jQuery('#ls-preview-content').show();
         jQuery('<img/>', {
             id: sliderId,
@@ -147,12 +149,17 @@ function getUrl(urlObj) {
 
     }
     if (elType === '3') {
-        jQuery(thumbBoxId).val(urlObj.url);
+        jQuery(thumbBoxId).val(urlObj.path);
     }
-    if (elType === '0') {
-        jQuery(textBoxId).val(urlObj.url);
+    if (elType === 0) {
+        // jQuery(textBoxId).val(urlObj.url);
+        alert(urlObj.path);
+        alert(urlObj.url);
+        alert(sliderId);
+        jQuery(".ls-loading-container").remove();
+        jQuery(textBoxId).val(urlObj.path);
         jQuery('#ls-preview-content').show();
-        jQuery('#' + sliderId).attr('src', urlObj.url);
+        jQuery(sliderId).attr('src', urlObj.url);
         var backGroundImage = '<img src="' + urlObj.url + '" id="' + sliderId + '" alt="Slide background" class="ls-bg background" >';
         jQuery('.ui-state-active').css('z-index', 999);
         jQuery('#layerslider').layerSlider({

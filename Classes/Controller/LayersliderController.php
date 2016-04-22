@@ -45,7 +45,7 @@ class LayersliderController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionCont
      * @return void
      */
     public function listAction() {
-       
+        $baseurl = $GLOBALS['TSFE']->tmpl->setup['config.']['baseURL'];
         $globalSettingArr = $this->settings;
         $this->cObj = $this->configurationManager->getContentObject();
         $recordPid = $this->cObj->data['pages'];
@@ -64,6 +64,7 @@ class LayersliderController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionCont
         if ($this->settings['enablejqueryeasing'] == 1) {
             $this->response->addAdditionalHeaderData('<!-- layerslider --><script src="typo3conf/ext/pits_layerslider/Resources/Public/layerslider/jQuery/jquery-easing-1.3.js" type="text/javascript"></script><!-- layerslider -->');
         }
+
 
         foreach ($tabsRecords as $pin => $value) {
             if (empty($value['transitions3d']) || empty($value['transitions2d'])) {
@@ -103,9 +104,6 @@ class LayersliderController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionCont
             if (!empty($value['transitions3d'])) {
                 $style .= "transition3d: " . $value['transitions3d'] . ";";
             }
-
-
-
             #$tabsRecords[$pin]['style'] = $style ;
             $select_fields = '*';
             $from_table = 'tx_pitslayerslider_domain_model_sublayers';
@@ -151,9 +149,6 @@ class LayersliderController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionCont
                 $innerStyle .= ( $records['layer_custom_style'] != '' ) ? $records['layer_custom_style'] : '';
                 $innerStyle .= 'white-space:nowrap;';
 
-
-
-
                 $layerRecords[$key]['innerStyle'] = $innerStyle;
                 $finalArr [$value['uid']]['child'][$i] = $records;
                 $finalArr [$value['uid']]['child'][$i]['innerStyle'] = $innerStyle;
@@ -161,9 +156,11 @@ class LayersliderController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionCont
             }
         }
 
+
         $globalSettingArr['jsOptions'] = $this->prepareGlobalOptions($globalSettingArr);
         $this->view->assign("globalSetting", $globalSettingArr);
         $this->view->assign("tabInfo", $finalArr);
+        $this->view->assign("baseurl", $baseurl);
     }
 
     /**
@@ -185,6 +182,8 @@ class LayersliderController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionCont
     public function select(&$params, &$pObj) {
         $start = strpos($_REQUEST['returnUrl'], '?') + 4;
         $returnUrl = strchr($_REQUEST['returnUrl'], '&');
+        // \TYPO3\CMS\Extbase\Utility\DebuggerUtility::var_dump($_REQUEST);
+        // die;
         /* if( !$returnUrl ){
           $end = strlen($_REQUEST['returnUrl']);
           }else{
@@ -193,26 +192,25 @@ class LayersliderController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionCont
         $end = (!$returnUrl ) ? strlen($_REQUEST['returnUrl']) : strpos($_REQUEST['returnUrl'], '&');
         substr($_REQUEST['returnUrl'], $start, $end);
         $ararty = array_keys($_REQUEST['edit']['tt_content']);
+        $uid = $pid = str_replace(",", "", $ararty[0]);
 
-        $uid = str_replace(",", "", $ararty[0]);
 
-        $select_fields = 'pid';
-        $from_table = "tt_content";
-        $groupBy1 = 'pid';
-        $orderBy1 = NULL;
-        $where_clause = "uid = " . $uid;
-        $selectedStorageFolder = $GLOBALS['TYPO3_DB']->exec_SELECTgetRows($select_fields, $from_table, $where_clause, $groupBy1, $orderBy1);
-
-        $storageFolderId = $selectedStorageFolder[0]['pid'];
-        \TYPO3\CMS\Extbase\Utility\DebuggerUtility::var_dump($storageFolderId);
-
+        // $select_fields = 'pid';
+        // $from_table = "tt_content";
+        // $groupBy1 = 'pid';
+        // $orderBy1 = NULL;
+        // $where_clause = "uid = " . $uid;
+        // $selectedStorageFolder = $GLOBALS['TYPO3_DB']->exec_SELECTgetRows($select_fields, $from_table, $where_clause, $groupBy1, $orderBy1);
+        // $storageFolderId = $selectedStorageFolder[0]['pid'];
         $select_fields_2 = '*';
         $from_table_2 = 'tx_pitslayerslider_domain_model_layerslider';
-        $where_clause_2 = 'deleted = 0 AND hidden = 0 AND pid IN ( ' . $storageFolderId . ' ) ';
+        $where_clause_2 = 'deleted = 0 AND hidden = 0';
+        // $where_clause_2 = 'deleted = 0 AND hidden = 0 AND pid IN ( ' . $storageFolderId . ' ) ';
         $groupBy_2 = NULL;
         $orderBy_2 = 'title';
-        $GLOBALS['TYPO3_DB']->store_lastBuiltQuery = 1;
+        //$GLOBALS['TYPO3_DB']->store_lastBuiltQuery = 1;
         $sliderInformation = $GLOBALS['TYPO3_DB']->exec_SELECTgetRows($select_fields_2, $from_table_2, $where_clause_2, $groupBy_2, $orderBy_2);
+
 
         foreach ($sliderInformation as $value) {
             $params['items'][] = array($value['title'], $value['uid']);
