@@ -104,6 +104,7 @@ var sliderId = '';
 var layerId = 0;
 function load_elfinder(id, type) {
     jQuery('.ui-state-active').css('z-index', 0);
+    jQuery(".ls-loading-container").remove();
     elType = type;
     imageId = '#child_layer_img_' + id;
     textBoxId = '#background_' + id;
@@ -132,8 +133,6 @@ function load_elfinder(id, type) {
     });
 }
 function getUrl(urlObj) {
-  console.log(urlObj);
-  alert(elType);
     if (elType === '1') {
         jQuery(sliderId).val(urlObj.path);
         jQuery(imageId).attr('src', urlObj.url);
@@ -152,10 +151,6 @@ function getUrl(urlObj) {
         jQuery(thumbBoxId).val(urlObj.path);
     }
     if (elType === 0) {
-        // jQuery(textBoxId).val(urlObj.url);
-        alert(urlObj.path);
-        alert(urlObj.url);
-        alert(sliderId);
         jQuery(".ls-loading-container").remove();
         jQuery(textBoxId).val(urlObj.path);
         jQuery('#ls-preview-content').show();

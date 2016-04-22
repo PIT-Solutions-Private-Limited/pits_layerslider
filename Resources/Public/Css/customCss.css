@@ -6,7 +6,7 @@ background/*
         Purpose of the stylesheet follows.
 */
 
-/* 
+/*
    TODO customize this sample style
    Syntax recommendation http://www.w3.org/TR/REC-CSS2/
 */
@@ -153,7 +153,7 @@ div#popup_content {
 }
 
 .ls-container .ls-glass {
-	
+
 }
 
 #layerslider {
@@ -315,7 +315,7 @@ div#popup_content {
 	padding: 0;
 	text-align: center;
 	width: 100%;
-	margin-top: 50px !important;
+	margin-top: 15px !important;
 }
 
 .preview_button_wrapper .preview,.preview_button_wrapper .reset {
@@ -442,7 +442,7 @@ ul.slider_tab {
 	border-radius: 0 0 0 0;
 	-moz-border-radius: 0 0 0 0;
 	-webkit-border-radius: 0 0 0 0;
-	-ms-border-radius: 0 0 0 0; 
+	-ms-border-radius: 0 0 0 0;
 }
 ul.slider_tab li.ui-state-default {
     border-bottom: 0 none !important;
@@ -457,7 +457,7 @@ ul.slider_tab li.ui-state-default {
 	font-weight: bold;
 	font-size: 11px;
 }
-ul.slider_tab li.ui-state-default a{ 
+ul.slider_tab li.ui-state-default a{
 	color: #C7C7C7;
 }
 ul.slider_tab li.ui-tabs-active {
@@ -468,8 +468,8 @@ ul.slider_tab li.ui-tabs-active {
 	background: -o-linear-gradient(top,  rgba(249,249,249,1) 1%,rgba(250,250,250,1) 100%)!important; /* Opera 11.10+ */
 	background: -ms-linear-gradient(top,  rgba(249,249,249,1) 1%,rgba(250,250,250,1) 100%)!important; /* IE10+ */
 	background: linear-gradient(to bottom,  rgba(249,249,249,1) 1%,rgba(250,250,250,1) 100%)!important; /* W3C */
-	filter: none!important; 
-	border-bottom:  none!important;   
+	filter: none!important;
+	border-bottom:  none!important;
 	border-left: 1px solid #DFDFDF !important;
 	border-right: 1px solid #DFDFDF !important;
 	border-top: 1px solid #DFDFDF !important;
@@ -477,25 +477,25 @@ ul.slider_tab li.ui-tabs-active {
 	font-weight: bold!important;
 	margin: 0 3px 0 0!important;
 	padding: 0 0 2px 0!important;
-	z-index: 999;	
+	z-index: 999;
 	font-size: 11px;
 }
 ul.slider_tab li.ui-tabs-active a {
 	color: #333333!important;
 }
 ul.slider_tab li.ui-state-default:hover {
-	border-color: #DFDFDF !important;	
+	border-color: #DFDFDF !important;
 }
 
 ul.slider_tab li.ui-state-default:hover a {
-	color: #333333!important;	
+	color: #333333!important;
 }
 .tabs-sortable {
-    border: 1px solid #DFDFDF!important;   
+    border: 1px solid #DFDFDF!important;
 	-moz-border-radius: 0 0 0 0!important;
 	-webkit-border-radius: 0 0 0 0!important;
 	-ms-border-radius: 0 0 0 0!important;
-	border-radius: 0 0 0 0!important;	
+	border-radius: 0 0 0 0!important;
     margin: 0 !important;
     padding: 0 !important;
     position: relative;
@@ -560,13 +560,13 @@ ul.slider_tab li.ui-state-default:hover a {
 	background: -o-linear-gradient(top,  rgba(255,255,255,1) 1%,rgba(251,251,251,1) 100%); /* Opera 11.10+ */
 	background: -ms-linear-gradient(top,  rgba(255,255,255,1) 1%,rgba(251,251,251,1) 100%); /* IE10+ */
 	background: linear-gradient(to bottom,  rgba(255,255,255,1) 1%,rgba(251,251,251,1) 100%); /* W3C */
-	filter: none;	
+	filter: none;
     border-bottom: 1px solid #E3E3E3;
     border-top: 1px solid #FFFFFF;
 	font-family: Verdana,Arial,sans-serif;
 	font-size: 13px;
     font-weight: normal;
-    line-height: 16px;	
+    line-height: 16px;
     height: 30px;
     padding: 4px 4px;
 }
@@ -603,11 +603,11 @@ ul.slider_tab li.ui-state-default:hover a {
     border-width: 1px;
 	outline: none;
 	margin: 1px 1px 1px 0px;
-    padding: 3px 3px;	
+    padding: 3px 3px;
 }
-.tabs-sortable table  input[type="text"], input[type="password"], input[type="file"], input[type="email"], input[type="number"], 
+.tabs-sortable table  input[type="text"], input[type="password"], input[type="file"], input[type="email"], input[type="number"],
 input[type="search"], input[type="tel"], input[type="url"], select {
-   line-height: 15px;	
+   line-height: 15px;
 }
 .tabs-sortable table  th, td {
     vertical-align: middle;
@@ -617,7 +617,7 @@ input[type="search"], input[type="tel"], input[type="url"], select {
 	-moz-border-radius: 5px 5px 5px 5px;
 	-webkit-border-radius: 5px 5px 5px 5px;
 	-ms-border-radius: 5px 5px 5px 5px;
-	border-radius: 5px 5px 5px 5px; 
+	border-radius: 5px 5px 5px 5px;
 	-moz-box-shadow: 0 0 5px 5px #FFFFFF;
 	-webkit-box-shadow: 0 0 5px 5px #FFFFFF;
 	box-shadow: 0 0 5px 5px #FFFFFF;
@@ -646,15 +646,15 @@ input[type="search"], input[type="tel"], input[type="url"], select {
 	background: -ms-linear-gradient(top,  rgba(254,254,254,1) 0%,rgba(244,244,244,1) 100%); /* IE10+ */
 	background: linear-gradient(to bottom,  rgba(254,254,254,1) 0%,rgba(244,244,244,1) 100%); /* W3C */
 	filter: none;
-	-moz-border-radius: 3px 3px 3px 3px;	
-	-webkit-border-radius: 3px 3px 3px 3px; 
-	-ms-border-radius: 3px 3px 3px 3px;	
+	-moz-border-radius: 3px 3px 3px 3px;
+	-webkit-border-radius: 3px 3px 3px 3px;
+	-ms-border-radius: 3px 3px 3px 3px;
 	border-radius: 3px 3px 3px 3px;
 	cursor: pointer;
 	display: inline-block;
 	font-size: 11px;
 	height: 24px;
-	line-height: 23px; 
+	line-height: 23px;
 	text-decoration: none;
 	white-space: nowrap;
 	border: 1px solid #BBBBBB;
@@ -672,8 +672,8 @@ input[type="search"], input[type="tel"], input[type="url"], select {
 	background: -o-linear-gradient(top,  rgba(254,254,254,1) 0%,rgba(243,243,243,1) 100%); /* Opera 11.10+ */
 	background: -ms-linear-gradient(top,  rgba(254,254,254,1) 0%,rgba(243,243,243,1) 100%); /* IE10+ */
 	background: linear-gradient(to bottom,  rgba(254,254,254,1) 0%,rgba(243,243,243,1) 100%); /* W3C */
-	filter: none;	
-	cursor: pointer;	
+	filter: none;
+	cursor: pointer;
 	border: 1px solid #999999;
 	color: #222222;
 }
@@ -686,15 +686,15 @@ input[type="search"], input[type="tel"], input[type="url"], select {
 	background: -ms-linear-gradient(top,  rgba(248,248,248,1) 1%,rgba (237,237,237,1) 100%); /* IE10+ */
 	background: linear-gradient(to bottom,  rgba(248,248,248,1) 1%,rgba (237,237,237,1) 100%); /* W3C */
 	filter: none;
-	-moz-border-radius: 0px 0px 0px 0px;	
-	-webkit-border-radius: 0px 0px 0px 0px; 
-	-ms-border-radius: 0px 0px 0px 0px;	
+	-moz-border-radius: 0px 0px 0px 0px;
+	-webkit-border-radius: 0px 0px 0px 0px;
+	-ms-border-radius: 0px 0px 0px 0px;
 	border-radius: 0px 0px 0px 0px;
-	border: none;    
+	border: none;
 	padding-left: 11px;
-	border-bottom: 1px solid #E3E3E3!important ;	
+	border-bottom: 1px solid #E3E3E3!important ;
 }
-.tabs_inner ul.ui-tabs-nav .label_layer_name {  
+.tabs_inner ul.ui-tabs-nav .label_layer_name {
 	background: url("../img/sprite.png") no-repeat 1px -399px;
     color: #333333;
     float: left;
@@ -703,9 +703,9 @@ input[type="search"], input[type="tel"], input[type="url"], select {
     height: 25px !important;
     line-height: 19px;
     padding: 3px 0 0 25px;
-    width: auto;	
+    width: auto;
 }
-.tabs_inner ul.ui-tabs-nav li.ui-tabs-active {	
+.tabs_inner ul.ui-tabs-nav li.ui-tabs-active {
 	background: rgb(249,249,249)!important; /* Old browsers */
 	background: -moz-linear-gradient(top,  rgba(249,249,249,1) 1%, rgba(250,250,250,1) 100%)!important; /* FF3.6+ */
 	background: -webkit-gradient(linear, left top, left bottom, color-stop(1%,rgba(249,249,249,1)), color-stop(100%,rgba(250,250,250,1)))!important; /* Chrome,Safari4+ */
@@ -713,14 +713,14 @@ input[type="search"], input[type="tel"], input[type="url"], select {
 	background: -o-linear-gradient(top,  rgba(249,249,249,1) 1%,rgba(250,250,250,1) 100%)!important; /* Opera 11.10+ */
 	background: -ms-linear-gradient(top,  rgba(249,249,249,1) 1%,rgba(250,250,250,1) 100%)!important; /* IE10+ */
 	background: linear-gradient(to bottom,  rgba(249,249,249,1) 1%,rgba(250,250,250,1) 100%)!important; /* W3C */
-	filter: none!important; 
-	border-bottom:  none!important;   
+	filter: none!important;
+	border-bottom:  none!important;
 	border-left: 1px solid #DFDFDF !important;
 	border-right: 1px solid #DFDFDF !important;
 	border-top: 1px solid #DFDFDF !important;
 	color: #333333!important;
-	font-weight: bold!important;	
-	font-size: 11px;	
+	font-weight: bold!important;
+	font-size: 11px;
 }
 .tabs_inner ul.ui-tabs-nav li.ui-tabs-active  a {
 	color: #333333!important;
@@ -734,17 +734,17 @@ input[type="search"], input[type="tel"], input[type="url"], select {
 	color: #C7C7C7;
 }
 .tabs_inner ul.ui-tabs-nav li.ui-state-default:hover {
-	border-color: #DFDFDF !important;	
+	border-color: #DFDFDF !important;
 	color: #C7C7C7;
 }
 
-.tabs_inner ul.ui-tabs-nav li.ui-state-default:hover a{	
+.tabs_inner ul.ui-tabs-nav li.ui-state-default:hover a{
 	color: #333333;
 }
 .enabletransition-inactive {
 	display: none !important;
 }
-.enabletransition-active{	
+.enabletransition-active{
 }
 
 /* color box listing */
@@ -752,7 +752,7 @@ input[type="search"], input[type="tel"], input[type="url"], select {
 	margin: 0;
     padding: 0;
     width: 100%;
-} 
+}
 .ls-colorboxtransition table.ls-transition-gallery tbody {
 	margin: 0;
     padding: 0;
@@ -765,8 +765,8 @@ input[type="search"], input[type="tel"], input[type="url"], select {
 	background: -o-linear-gradient(top,  rgba(255,255,255,1) 1%,rgba(251,251,251,1) 100%); /* Opera 11.10+ */
 	background: -ms-linear-gradient(top,  rgba(255,255,255,1) 1%,rgba(251,251,251,1) 100%); /* IE10+ */
 	background: linear-gradient(to bottom,  rgba(255,255,255,1) 1%,rgba(251,251,251,1) 100%); /* W3C */
-	filter: none;		
-    border-bottom: 1px solid #E3E3E3;    
+	filter: none;
+    border-bottom: 1px solid #E3E3E3;
     border-top: 1px solid #FFFFFF;
     height: 30px;
     line-height: 20px;
@@ -790,17 +790,17 @@ input[type="search"], input[type="tel"], input[type="url"], select {
 	background: -o-linear-gradient(top,  rgba(248,248,248,1) 1%,rgba (237,237,237,1) 100%); /* Opera 11.10+ */
 	background: -ms-linear-gradient(top,  rgba(248,248,248,1) 1%,rgba (237,237,237,1) 100%); /* IE10+ */
 	background: linear-gradient(to bottom,  rgba(248,248,248,1) 1%,rgba (237,237,237,1) 100%); /* W3C */
-	filter: none; 
+	filter: none;
     border-bottom: 1px solid #DFDFDF;
-    border-top: 1px solid #FFFFFF;    
+    border-top: 1px solid #FFFFFF;
 	color: #333333;
     font-size: 11px;
     font-weight: bold;
-    line-height: 29px;	
+    line-height: 29px;
     height: 29px;
     margin: 0;
     padding: 0 10px;
-	
+
 }
 
 /* end */
@@ -817,14 +817,14 @@ input[type="search"], input[type="tel"], input[type="url"], select {
 }
 
 .tabs_inner  .ui-tabs-panel table tr td  input, select, textarea {
-	-moz-border-radius: 0px 0px 0px 0px!important;	
-	-webkit-border-radius: 0px 0px 0px 0px!important; 
-	-ms-border-radius: 0px 0px 0px 0px!important;	
+	-moz-border-radius: 0px 0px 0px 0px!important;
+	-webkit-border-radius: 0px 0px 0px 0px!important;
+	-ms-border-radius: 0px 0px 0px 0px!important;
 	border-radius: 0px 0px 0px 0px!important;
 }
 
-.tabs_inner  .ui-tabs-panel table tr td.row1, .tabs_inner  .ui-tabs-panel table tr td.row2, 
-.tabs_inner  .ui-tabs-panel table tr td.row3, .tabs_inner  .ui-tabs-panel table tr td.row4, 
+.tabs_inner  .ui-tabs-panel table tr td.row1, .tabs_inner  .ui-tabs-panel table tr td.row2,
+.tabs_inner  .ui-tabs-panel table tr td.row3, .tabs_inner  .ui-tabs-panel table tr td.row4,
 .tabs_inner  .ui-tabs-panel table tr td.row5, .tabs_inner  .ui-tabs-panel table tr td.row6{
 	vertical-align: bottom;
 }
@@ -845,7 +845,7 @@ input[type="search"], input[type="tel"], input[type="url"], select {
 .tabs_inner  .ui-tabs-panel table tr td.row3 select {
 	width: 113px!important;
 }
-.tabs_inner  .ui-tabs-panel table tr td.row5 table tr td input {	
+.tabs_inner  .ui-tabs-panel table tr td.row5 table tr td input {
 	width: 127px!important;
 }
 
@@ -880,6 +880,3 @@ input[type="search"], input[type="tel"], input[type="url"], select {
 .preview{
 	display: block;
 }
-
-
-
