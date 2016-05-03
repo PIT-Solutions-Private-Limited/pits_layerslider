@@ -7,8 +7,10 @@ use \TYPO3\CMS\Core\Utility\GeneralUtility;
 /* * *************************************************************
  *  Copyright notice
  *
- *  (c) 2013 Sivaprasad S <sivaprasad.s@pitsolutions.com>, Pit Solution Pvt Ltd
+ *  (c) 2013
+ *  Sivaprasad S <sivaprasad.s@pitsolutions.com>, Pit Solution Pvt Ltd
  *  Abin Sabu <abin.sabu@pitsolutions.com>, PIT Solution Pvt Ltd
+ *  Akhil Jayan <akhil.jn@pitsolutions.com>, PIT Solution Pvt Ltd
  *
  *  All rights reserved
  *

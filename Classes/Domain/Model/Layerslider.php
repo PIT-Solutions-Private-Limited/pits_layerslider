@@ -4,8 +4,10 @@ namespace PITS\PitsLayerslider\Domain\Model;
 /***************************************************************
  *  Copyright notice
  *
- *  (c) 2013 Sivaprasad S <sivaprasad.s@pitsolutions.com>, Pit Solution Pvt Ltd
+ *  (c) 2013
+ *  Sivaprasad S <sivaprasad.s@pitsolutions.com>, Pit Solution Pvt Ltd
  *  Abin Sabu <abin.sabu@pitsolutions.com>, PIT Solution Pvt Ltd
+ *  Akhil Jayan <akhil.jn@pitsolutions.com>, PIT Solution Pvt Ltd
  *
  *  All rights reserved
  *
@@ -37,7 +39,7 @@ class Layerslider extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity {
 
 	/**
 	 * title
-   * 
+   *
 	 * @var string
 	 */
 	protected $title = null;

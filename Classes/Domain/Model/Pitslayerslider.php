@@ -4,9 +4,11 @@ namespace PITS\PitsLayerslider\Domain\Model;
 /***************************************************************
  *  Copyright notice
  *
- *  (c) 2013 Sivaprasad S <sivaprasad.s@pitsolutions.com>, Pit Solution Pvt Ltd
+ *  (c) 2013
+ *  Sivaprasad S <sivaprasad.s@pitsolutions.com>, Pit Solution Pvt Ltd
  *  Abin Sabu <abin.sabu@pitsolutions.com>, PIT Solution Pvt Ltd
- *  
+ *  Akhil Jayan <akhil.jn@pitsolutions.com>, PIT Solution Pvt Ltd
+ *
  *  All rights reserved
  *
  *  This script is part of the TYPO3 project. The TYPO3 project is
