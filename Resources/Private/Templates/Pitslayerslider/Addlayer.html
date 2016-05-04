@@ -1,6 +1,7 @@
 <f:layout name="Backend" />
 <f:section name="content">
     <div class="tabs_inner" id="inner-layer-{tabInfo.uid}">
+      <span onClick='removeTab("{tabInfo.uid}", "layer", "{delete-uri}")' class='ui-icon ui-icon-close closeicon' style='float: right;' role='presentation'></span>
     	<input type="hidden" value="" id="layer_order_{tabInfo.uid}" name="tx_pitslayerslider_web_pitslayersliderpitslayerslider[layer_data][{tabInfo.uid}][layer_order]"/>
         <ul>
             <label>Layer #{tabInfo.uid}</label>
@@ -201,5 +202,5 @@
         <input id="new-addlayer-url" class="new-addlayer-url" type="hidden" value="{f:uri.action(action: 'addlayer', controller: 'Pitslayerslider')}">
         <input id ='add_sublayer_{tabInfo.tab_id}' class="sub_layer" type="button" value="Add new sublayer" />
     </div>
-    
+
 </f:section>

@@ -32,7 +32,7 @@
 
 
         <div id="layerslider" style="width: 900px; height: 460px;">
-          <div style="border:black solid 1px; text-align:center; margin-top:20%;"> No image found </div>
+            <div style="border:black solid 1px; text-align:center; margin-top:20%;"> No image found </div>
         </div>
         <!-- <div id="layersliderw" style="width: 900px; height: 500px;  margin-bottom: 50px;">No Tab Selected</div> -->
         <div class="preview_button_wrapper">
@@ -100,7 +100,7 @@
                                             <span class="ls-reset">x</span>
                                         </div>
                                     </td>
-                                    <td class="right">Thumbnail</td>
+                                    <!-- <td class="right">Thumbnail</td>
                                     <td>
                                         <div class="reset-parent">
                                             <input type="text" placeholder="Thumbnail Image" id="thumb_{tabsInfo.uid}" title="The thumbnail image of this slide. Click into the field to open the WordPress Media Library to choose or upload an image. If you leave this field empty, the slide image will be used."
@@ -108,7 +108,7 @@
                                             />
                                             <span class="ls-reset">x</span>
                                         </div>
-                                    </td>
+                                    </td> -->
                                     <td class="right">Slide delay</td>
                                     <td>
                                         <input type="text" title="Here you can set the time interval between slide changes, this slide will stay visible for the time specified here. This value is in millisecs, so the value 1000 means 1 second. Please don't use 0 or very low values." value="{tabsInfo.slidedelay}"
@@ -447,9 +447,9 @@
 
                                                             <tr>
                                                                 <td>
-                                                                  <!-- var_dump -->
+                                                                    <!-- var_dump -->
                                                                     <input type="text" value="{tabsInfoChild.layer_image}" name="tx_pitslayerslider_web_pitslayersliderpitslayerslider[layer_data][{tabsInfoChild.uid}][layer_image]" id="child_layer_img_{tabsInfoChild.uid}_text" />
-                                                                    <input type="text" value="{tabsInfoChild.layer_image}">
+                                                                    <input type="hidden" value="{tabsInfoChild.layer_image}">
                                                                     <input type="button" style="width: 100px" value="upload" class="topopup" onclick="load_elfinder('{tabsInfoChild.uid}', '1');" />
                                                                 </td>
                                                             </tr>
@@ -468,7 +468,8 @@
                                                             </tr>
                                                             <tr>
                                                                 <td>
-                                                                    <input type="text" placeholder="Text here" id="layertext_{tabsInfoChild.uid}" class="attributes tooltip-no" title="Type here the contents of your layer. You can use any HTML codes in this field to insert other contents then text. This field is also shortcode-aware, so you can insert content from other plugins as well as video embed codes." name="tx_pitslayerslider_web_pitslayersliderpitslayerslider[layer_data][{tabsInfoChild.uid}][layer_text]" value="{tabsInfoChild.layer_text}" />
+                                                                    <input type="text" placeholder="Text here" id="layertext_{tabsInfoChild.uid}" class="attributes tooltip-no" title="Type here the contents of your layer. You can use any HTML codes in this field to insert other contents then text. This field is also shortcode-aware, so you can insert content from other plugins as well as video embed codes."
+                                                                        name="tx_pitslayerslider_web_pitslayersliderpitslayerslider[layer_data][{tabsInfoChild.uid}][layer_text]" value="{tabsInfoChild.layer_text}" />
                                                                 </td>
                                                             </tr>
                                                             <tr>
@@ -505,7 +506,8 @@
                                                             </tr>
                                                             <tr>
                                                                 <td>
-                                                                    <input type="text" id="layer_{tabsInfoChild.uid}" style="width: 100px" placeholder="URL for the layer" name="tx_pitslayerslider_web_pitslayersliderpitslayerslider[layer_data][{tabsInfoChild.uid}][layer_url]" value="{tabsInfoChild.layer_url}" class="tooltip-no" title="URL for the layer">
+                                                                    <input type="text" id="layer_{tabsInfoChild.uid}" style="width: 100px" placeholder="URL for the layer" name="tx_pitslayerslider_web_pitslayersliderpitslayerslider[layer_data][{tabsInfoChild.uid}][layer_url]" value="{tabsInfoChild.layer_url}" class="tooltip-no"
+                                                                        title="URL for the layer">
                                                                     <select class="tooltip-no attributes" title="Check this filed if this is the background layer." name="tx_pitslayerslider_web_pitslayersliderpitslayerslider[layer_data][{tabsInfoChild.uid}][layer_link_control]">
                                                                         <f:for each="{tabs.urlControlList}" as="value" key="key">
                                                                             <f:if condition="{tabsInfoChild.layer_link_control}=={value}">
@@ -587,6 +589,10 @@
                 <input type="hidden" id="new-addlayer-url" value="{f:uri.action(action: 'addlayer', controller: 'Pitslayerslider')}">
             </div>
         </form>
+        <!-- <button id="man-click">click man</button> -->
+        <!-- <div id="dialog-man" title="Basic dialog">
+            <p>This is an animated dialog which is useful for displaying information. The dialog window can be moved, resized and closed with the 'x' icon.</p>
+        </div> -->
         <!--Section for popUP-->
         <div id="toPopup">
             <div class="close"></div>

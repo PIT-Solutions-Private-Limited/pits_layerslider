@@ -15,7 +15,14 @@
         <div id="layerslider" style="width:{globalSetting.width}px; height:{globalSetting.height}px; margin: 0 auto;">
             <f:for each="{tabInfo}" as="slider" key="sliderKey" iteration="sliderObj">
                 <div class="ls-layer" style="{slider.style}">
-                    <img src="{baseurl}{slider.background}" id="layer_{slider.uid}" alt="Slide background" class="ls-bg" />
+                    <f:if condition="{slider.background}">
+                      <f:then>
+                        <img src="{baseurl}{slider.background}" id="layer_{slider.uid}" alt="Slide background" class="ls-bg" />
+                      </f:then>
+                      <f:else>
+                        <h6>...</h6>
+                      </f:else>
+                    </f:if>
                     <f:if condition="{slider.thumbnail}">
                         <img class="ls-tn" src="{baseurl}{slider.thumbnail}" alt="">
                     </f:if>

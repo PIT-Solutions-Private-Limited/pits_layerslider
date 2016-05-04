@@ -9,6 +9,23 @@ var transitionGallery;
 
 jQuery(document).ready(function() {
 
+    jQuery("#dialog-man").dialog({
+        autoOpen: false,
+        show: {
+            effect: "blind",
+            duration: 1000
+        },
+        hide: {
+            effect: "explode",
+            duration: 1000
+        }
+    });
+
+    jQuery("#man-click").click(function() {
+      alert('asdasd');
+      $( "#dialog-man" ).dialog("open");
+    });
+
     jQuery(".ls-reset ").click(function() {
         jQuery(this).parent().find('input').val('');
     });
@@ -248,7 +265,6 @@ jQuery(document).ready(function() {
         var button_id = jQuery(this).attr("id").split("_");
         var tab_id = button_id[2];
         var url = jQuery("#new-addlayer-url").val();
-        alert(url);
         jQuery.ajax({
             url: url,
             type: "POST",

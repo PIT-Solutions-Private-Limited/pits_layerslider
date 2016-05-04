@@ -192,7 +192,7 @@ class LayersliderController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionCont
           } */
         $end = (!$returnUrl ) ? strlen($_REQUEST['returnUrl']) : strpos($_REQUEST['returnUrl'], '&');
         substr($_REQUEST['returnUrl'], $start, $end);
-        $ararty = array_keys($_REQUEST['edit']['tt_content']);
+        //$ararty = array_keys($_REQUEST['edit']['tt_content']);
         $uid = $pid = str_replace(",", "", $ararty[0]);
 
 
