@@ -106,6 +106,7 @@ function load_elfinder(id, type) {
     jQuery('.ui-state-active').css('z-index', 0);
     jQuery(".ls-loading-container").remove();
     elType = type;
+    backgroundImgId = '#background_img_disp_' + id;
     imageId = '#child_layer_img_' + id;
     textBoxId = '#background_' + id;
     thumbBoxId = '#thumb_' + id;
@@ -154,6 +155,7 @@ function getUrl(urlObj) {
         jQuery(".ls-loading-container").remove();
         jQuery(textBoxId).val(urlObj.path);
         jQuery('#ls-preview-content').show();
+        jQuery(backgroundImgId).attr('src', urlObj.url);
         jQuery(sliderId).attr('src', urlObj.url);
         var backGroundImage = '<img src="' + urlObj.url + '" id="' + sliderId + '" alt="Slide background" class="ls-bg background" >';
         jQuery('.ui-state-active').css('z-index', 999);

@@ -13,6 +13,12 @@ background/*
 .slide-tab {
 	float: right !important;
 }
+
+#typo3-inner-docbody{
+	overflow: auto !important;
+	height:100% !important;
+}
+
 /*
 	author: istockphp.com
 */
