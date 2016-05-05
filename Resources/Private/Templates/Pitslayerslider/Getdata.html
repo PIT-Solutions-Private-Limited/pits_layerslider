@@ -1,7 +1,12 @@
 <f:layout name="Backend" />
 <f:section name="content">
+<style type="text/css">
+	.ls-loading-container{
+		display: none !important;
+	}
+</style>
 <div class="ls-layer" style="width: 900px; height: 500px;" id="ls-preview-content">
-<img src="{baseurl}{tabInfo.sliderInfo.0.background}" id="layer_{tabInfo.sliderInfo.0.uid}" alt="Slide background" class="ls-bg" style="" />
+	<img src="{baseurl}{tabInfo.sliderInfo.0.background}" id="layer_{tabInfo.sliderInfo.0.uid}" alt="Slide background" class="ls-bg" style="" />
 <f:for each="{tabInfo.tabsInfo}" as="layers" key="layerKey" iteration="layerObj">
 	<f:if condition="{layers.is_htmltag}">
 		<f:then>
@@ -17,7 +22,7 @@
 			scalein : 0;showuntil:{layers.layer_units};
 			rotatein: 180;
 			rotateout: -90;
-                        white-space:nowrap;" ><f:format.htmlentitiesDecode>{layers.layer_text}</f:format.htmlentitiesDecode></{layers.layer_style}>
+      white-space:nowrap;" ><f:format.htmlentitiesDecode>{layers.layer_text}</f:format.htmlentitiesDecode></{layers.layer_style}>
 		</f:then>
 		<f:else>
 		<f:if condition="{layers.layer_image}">
